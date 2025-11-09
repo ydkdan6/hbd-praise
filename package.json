@@ -9,13 +9,14 @@
   },
   "browserslist": "last 10 versions, not dead",
   "scripts": {
-    "watch:parcel": "parcel src/index.html",
-    "build:parcel": "parcel build src/index.html",
-    "init-index-local": "node builder/init.js --local",
-    "init-index-remote": "node builder/init.js --remote",
-    "watch": "npm-run-all init-index-local watch:parcel",
-    "build": "npm-run-all init-index-local build:parcel"
-  },
+  "start": "npm run watch",
+  "watch:parcel": "parcel src/index.html",
+  "build:parcel": "parcel build src/index.html",
+  "init-index-local": "node builder/init.js --local",
+  "init-index-remote": "node builder/init.js --remote",
+  "watch": "npm-run-all init-index-local watch:parcel",
+  "build": "npm-run-all init-index-remote build:parcel"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnshumanMahato/Happy-Birthday-Card.git"
@@ -35,8 +36,7 @@
     "@parcel/transformer-sass": "^2.6.2",
     "@parcel/transformer-webmanifest": "^2.6.2",
     "parcel": "^2.6.2",
-    "sass": "^1.53.0",
-    "sharp": "^0.34.5"
+    "sass": "^1.53.0"
   },
   "dependencies": {
     "axios": "^0.27.2",
